@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import { Weather } from '../@types'
 import Home from '../components/Home'
+import useLoadWeather from '../hooks/useLoadWeather'
 
 const Index: NextPage = () => {
-  const weatherItems: Weather[] = []
+  const [weatherItems] = useLoadWeather()
 
   return (
     <>

@@ -5,8 +5,8 @@ import { StyledContainer } from './styles'
 const WeatherForecast = ({ items }: { items: Weather[] }) => {
   return (
     <StyledContainer>
-      {items.map((item) => (
-        <ForecastItem item={item} />
+      {items.map((item, idx) => (
+        <ForecastItem key={idx} item={item} />
       ))}
     </StyledContainer>
   )
