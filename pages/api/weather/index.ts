@@ -1,0 +1,147 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { Weather } from './@types'
+
+const nowData: Weather[] = [
+  {
+    regionName: '울릉/독도',
+    city: '경상북도',
+    county: '울릉군',
+    temperture: 21,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '제주',
+    city: '제주도',
+    county: '서귀포시',
+    temperture: 20,
+    text: '구름많음',
+    night: true,
+  },
+  {
+    regionName: '안동',
+    city: '경상북도',
+    county: '안동시',
+    temperture: 21,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '수원',
+    city: '경기도',
+    county: '권선구',
+    temperture: 19,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '부산',
+    city: '부산광역시',
+    county: '중구',
+    temperture: 18,
+    text: '구름많음',
+    night: true,
+  },
+  {
+    regionName: '전주',
+    city: '전라북도',
+    county: '덕진구',
+    temperture: 19,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '울산',
+    city: '울산광역시',
+    county: '중구',
+    temperture: 19,
+    text: '흐림',
+    night: true,
+  },
+  {
+    regionName: '광주',
+    city: '광주광역시',
+    county: '동구',
+    temperture: 20,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '대전',
+    city: '대전광역시',
+    county: '동구',
+    temperture: 18,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '춘천',
+    city: '강원도',
+    county: '춘천시',
+    temperture: 19,
+    text: '구름많음',
+    night: true,
+  },
+  {
+    regionName: '서울',
+    city: '서울특별시',
+    county: '중구',
+    temperture: 17,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '여수',
+    city: '전라남도',
+    county: '여수시',
+    temperture: 23,
+    text: '흐림',
+    night: true,
+  },
+  {
+    regionName: '청주',
+    city: '충청북도',
+    county: '상당구',
+    temperture: 19,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '목포',
+    city: '전라남도',
+    county: '목포시',
+    temperture: 17,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '강릉',
+    city: '강원도',
+    county: '강릉시',
+    temperture: 21,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '대구',
+    city: '대구광역시',
+    county: '중구',
+    temperture: 24,
+    text: '맑음',
+    night: true,
+  },
+  {
+    regionName: '백령',
+    city: '인천광역시',
+    county: '옹진군',
+    temperture: 15,
+    text: '흐림',
+    night: true,
+  },
+]
+
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
+  return res.json({ nowData })
+}
+
+export default handler
