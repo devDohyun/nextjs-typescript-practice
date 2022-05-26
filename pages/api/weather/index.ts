@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Weather } from './@types'
+import { Weather } from '../../../@types'
 
 const nowData: Weather[] = [
   {
